@@ -2,7 +2,7 @@
 	ui = auto
 
 [alias]
-	master = checkout master
+	master     = checkout master
 	unstage    = reset -q HEAD --
 	discard    = checkout --
 	rewrite    = rebase -i
@@ -10,9 +10,6 @@
 	amend      = commit --amend
 	addall     = add .
 	append     = add -p
-	untrack    = rm -r --cached
-	uncommit   = reset --mixed HEAD~
-	unmerged   = branch --no-merged
 	cached     = diff --cached
 	back       = checkout "-"
 	summary    = status -u -s
@@ -20,16 +17,20 @@
 	tags       = tag
 	branches   = branch -a
 	stashes    = stash list
-	unstash    = stash pop
-	unedit     = reset --hard
+	uncommit   = reset --mixed HEAD~
 	undo       = "!f(){ git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+	unedit     = reset --hard
+	unmerged   = branch --no-merged
+	unstash    = stash pop
+	untrack    = rm -r --cached
 	backto     = reset --hard HEAD^
 	newbranch  = checkout -b
-	dropBranch = branch -d
+	dropbranch = branch -d
 	show-graph = log --graph --abbrev-commit --pretty=online
 	history    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	last       = log -1 HEAD --format=format:"%Cred%H"
 	what       = show -w
+	nbr	   = checkout -b
 	aa = add .
 	br = branch
 	co = checkout
@@ -43,7 +44,7 @@
 	l = log
 	lo = log --pretty=online
 	lp = log -p
-	s = status
+	s  = status
 
 [core]
 	quotepath = false
