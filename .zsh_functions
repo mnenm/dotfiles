@@ -1,0 +1,13 @@
+function mem-cli(){
+  host=${1:-localhost}
+  port=${2:-11211}
+  telnet $host $port
+}
+
+function psat(){
+  ps aux | grep $1
+}
+
+function tardir(){
+  tar czvf $1.tar.gz $1
+}

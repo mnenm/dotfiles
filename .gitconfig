@@ -1,0 +1,52 @@
+[color]
+	ui = auto
+
+[alias]
+	master = checkout master
+	unstage    = reset -q HEAD --
+	discard    = checkout --
+	rewrite    = rebase -i
+	save       = commit -m
+	amend      = commit --amend
+	addall     = add .
+	append     = add -p
+	untrack    = rm -r --cached
+	uncommit   = reset --mixed HEAD~
+	unmerged   = branch --no-merged
+	cached     = diff --cached
+	back       = checkout "-"
+	summary    = status -u -s
+	remotes    = remote -v
+	tags       = tag
+	branches   = branch -a
+	stashes    = stash list
+	unstash    = stash pop
+	unedit     = reset --hard
+	undo       = "!f(){ git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+	backto     = reset --hard HEAD^
+	newbranch  = checkout -b
+	dropBranch = branch -d
+	show-graph = log --graph --abbrev-commit --pretty=online
+	history    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	last       = log -1 HEAD --format=format:"%Cred%H"
+	what       = show -w
+	aa = add .
+	br = branch
+	co = checkout
+	c = commit
+	ca = commit --amend
+	cm = commit -m
+	d = diff
+	dc = diff --cached
+	dl = diff HEAD^ HEAD
+	ds = diff HEAD^ HEAD --stat
+	l = log
+	lo = log --pretty=online
+	lp = log -p
+	s = status
+
+[core]
+	quotepath = false
+	autocrlf = false
+	safecrlf = false
+	editor = vim
