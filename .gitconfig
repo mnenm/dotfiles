@@ -28,7 +28,7 @@
 	dropbranch = branch -d
 	show-graph = log --graph --abbrev-commit --pretty=online
 	history    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	last       = log -1 HEAD --format=format:\%Cred%H\"
+	last       = log -1 HEAD --format=format:\"%Cred%H\"
 	notpushedyet = log @{u}..HEAD --format="- %H %s"
 	what       = show -w
 	nbr	   = checkout -b
