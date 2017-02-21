@@ -1,0 +1,1 @@
+alias fcnt='ls -U1 | wc -l'
