@@ -40,3 +40,7 @@ function ssh-multi(){
     tmux set-window-option synchronize-panes on
     tmux attach-session -t $session
 }
+
+function zgreph() {
+  zgrep --no-filename $1 $2
+}
