@@ -65,7 +65,7 @@ au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 
 au FileType php nnoremap <C-e> :!php -e %<CR>
 au FileType php nnoremap <C-l> :!php -l %<CR>
-autocmd FileType php setlocal sw=4 sts=4 ts=4
+autocmd FileType php setlocal noet sw=4 sts=4 ts=4
 
 au FileType ruby nnoremap <C-e> :!ruby %<CR>
 
