@@ -19,6 +19,7 @@ set history=100
 set smartcase
 set showmatch
 set hlsearch
+set list listchars=tab:>.
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent><C-m> :setlocal number!<CR>
 
@@ -102,8 +103,9 @@ let g:indent_guides_start_level=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_color_change_percent=20
 let g:indent_guides_space_guides=1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgray
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkblue
+autocmd VimEnter,Colorscheme * :hi SpecialKey ctermfg=darkblue
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=darkblue ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=darkgray ctermbg=darkblue
 au FileType php,ruby,coffee,javascript,python,elixir,go IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle
 
