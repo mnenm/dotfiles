@@ -6,6 +6,7 @@
 	unstage    = reset -q HEAD --
 	discard    = checkout --
 	rewrite    = rebase -i
+	restore    = reset --hard
 	save       = commit -m
 	amend      = commit --amend
 	addall     = add .
@@ -31,7 +32,7 @@
 	last       = log -1 HEAD --format=format:\"%Cred%H\"
 	notpushedyet = log @{u}..HEAD --format="- %H %s"
 	what       = show -w
-	nbr	   = checkout -b
+	nbr        = checkout -b
 	npy        = log @{u}..HEAD --format=\"- %H %s\"
 	aa = add .
 	br = branch

@@ -24,5 +24,6 @@ export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 
+[ -f $HOME/.zplugrc ] && source $HOME/.zplugrc
 [ -f $HOME/.zsh_aliases ] && source $HOME/.zsh_aliases
 [ -f $HOME/.zsh_functions ] && source $HOME/.zsh_functions

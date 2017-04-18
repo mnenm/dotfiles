@@ -1,1 +1,2 @@
-alias fcnt='ls -U1 | wc -l'
+alias fcnt="ls -U1 | wc -l"
+alias repo="cd $HOME/Documents/repositories"

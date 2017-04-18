@@ -42,7 +42,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'claco/jasmine.vim'
@@ -66,7 +65,7 @@ au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 
 au FileType php nnoremap <C-e> :!php -e %<CR>
 au FileType php nnoremap <C-l> :!php -l %<CR>
-autocmd FileType php setlocal noet sw=4 sts=4 ts=4
+autocmd FileType php setlocal autoindent sw=4 sts=4 ts=4
 
 au FileType ruby nnoremap <C-e> :!ruby %<CR>
 
@@ -104,8 +103,8 @@ let g:indent_guides_auto_colors=0
 let g:indent_guides_color_change_percent=20
 let g:indent_guides_space_guides=1
 autocmd VimEnter,Colorscheme * :hi SpecialKey ctermfg=darkblue
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermfg=darkblue ctermbg=darkgray
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=darkgray ctermbg=darkblue
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=darkgray ctermbg=darkblue
 au FileType php,ruby,coffee,javascript,python,elixir,go IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle
 

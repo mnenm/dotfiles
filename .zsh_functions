@@ -44,3 +44,23 @@ function ssh-multi(){
 function zgreph() {
   zgrep --no-filename $1 $2
 }
+
+function ec2ssh(){
+    ssh -i $1 $3@$2
+}
+
+function docker-killall(){
+  docker rm -f $(docker ps -aq)
+}
+
+function docker-art-migrate(){
+  docker exec -it $1 php artisan migrate
+}
+
+function docker-art-dbseed(){
+  docker exec -it $1 php artisan db:seed
+}
+
+function docker-phpunit(){
+  docker exec -it $1 vendor/bin/phpunit
+}
