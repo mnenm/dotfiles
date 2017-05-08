@@ -57,6 +57,10 @@ function docker-art-migrate(){
   docker exec -it $1 php artisan migrate
 }
 
+function docker-art-rollback(){
+  docker exec -it $1 php artisan migrate:rollback
+}
+
 function docker-art-dbseed(){
   docker exec -it $1 php artisan db:seed
 }

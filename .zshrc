@@ -23,7 +23,12 @@ setopt nolistbeep
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
+export LESSCHARSET=utf-8
+
+export COMPOSER_PATH=$HOME/.composer/vendor
+export PATH=/usr/local/bin:$COMPOSER_PATH/bin:$PATH
 
 [ -f $HOME/.zplugrc ] && source $HOME/.zplugrc
 [ -f $HOME/.zsh_aliases ] && source $HOME/.zsh_aliases
 [ -f $HOME/.zsh_functions ] && source $HOME/.zsh_functions
+# [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux

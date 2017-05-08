@@ -27,6 +27,7 @@
 	backto     = reset --hard HEAD^
 	newbranch  = checkout -b
 	dropbranch = branch -d
+	forcedropbranch = branch -D
 	show-graph = log --graph --abbrev-commit --pretty=online
 	history    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	last       = log -1 HEAD --format=format:\"%Cred%H\"
@@ -34,6 +35,8 @@
 	what       = show -w
 	nbr        = checkout -b
 	npy        = log @{u}..HEAD --format=\"- %H %s\"
+	dbr        = branch -d
+	fdbr       = branch -D
 	aa = add .
 	br = branch
 	co = checkout

@@ -1,6 +1,6 @@
-set fenc=utf-8
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,ucs-2le,ucs-2,cp932
+"set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8
 set fileformats=unix,dos,mac
 set number
 set ruler
@@ -20,6 +20,8 @@ set smartcase
 set showmatch
 set hlsearch
 set list listchars=tab:>.
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P]']'}
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent><C-m> :setlocal number!<CR>
 
