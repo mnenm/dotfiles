@@ -25,8 +25,12 @@ export VISUAL='vim'
 export PAGER='less'
 export LESSCHARSET=utf-8
 
-export COMPOSER_PATH=$HOME/.composer/vendor
-export PATH=/usr/local/bin:$COMPOSER_PATH/bin:$PATH
+export PYENV_PATH=$HOME/.pyenv
+
+export PATH=/usr/local/bin:$PYENV_PATH/bin:$PATH
+
+eval "$(pyenv init -)"
+eval "$(direnv hook zsh)"
 
 [ -f $HOME/.zplugrc ] && source $HOME/.zplugrc
 [ -f $HOME/.zsh_aliases ] && source $HOME/.zsh_aliases

@@ -68,3 +68,14 @@ function docker-art-dbseed(){
 function docker-phpunit(){
   docker exec -it $1 vendor/bin/phpunit
 }
+
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
