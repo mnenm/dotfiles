@@ -25,8 +25,8 @@ export VISUAL='vim'
 export PAGER='less'
 export LESSCHARSET=utf-8
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
 export PYENV_PATH=$HOME/.pyenv
-
 export PATH=/usr/local/bin:$PYENV_PATH/bin:$PATH
 
 eval "$(pyenv init -)"
